@@ -2,12 +2,19 @@ import React from "react";
 import { View } from "react-native";
 import { StatusBar, Box, HStack, Text } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
+import colors from "../utils/colors";
 function AppHeader({ title, navigation }) {
   return (
     <View>
-      <StatusBar bg="#3700B3" barStyle="light-content" />
+      <StatusBar bg={colors.primaryColor} barStyle="light-content" />
       <Box safeAreaTop bg="#6200ee" />
-      <HStack bg="#6200ee" px="1" py="3" w="100%">
+      <HStack
+        bg={colors.primaryColor}
+        px="1"
+        py="3"
+        w="100%"
+        alignItems="center"
+      >
         <Ionicons
           name="reorder-three-sharp"
           size={24}

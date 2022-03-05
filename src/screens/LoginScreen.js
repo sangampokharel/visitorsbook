@@ -68,7 +68,11 @@ const LoginScreen = ({ navigation }) => {
             <FormControl.Label>
               <Text color={colors.primaryColor}>Email</Text>
             </FormControl.Label>
-            <Input value={email} onChangeText={setEmail} />
+            <Input
+              value={email}
+              onChangeText={setEmail}
+              autoCapitalize="none"
+            />
           </FormControl>
           <FormControl>
             <FormControl.Label color={colors.primaryColor}>
@@ -78,6 +82,7 @@ const LoginScreen = ({ navigation }) => {
               type="password"
               value={password}
               onChangeText={setPassword}
+              autoCapitalize="none"
             />
             <TouchableOpacity
               onPress={() => {
@@ -92,7 +97,7 @@ const LoginScreen = ({ navigation }) => {
           <Button
             isLoading={isLoading}
             mt="2"
-            colorScheme="indigo"
+            bg={colors.primaryColor}
             onPress={() => {
               handleSubmit();
             }}

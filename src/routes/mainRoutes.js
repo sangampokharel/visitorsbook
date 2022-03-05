@@ -8,8 +8,9 @@ import DrawerRoutes from "./DrawerRoutes";
 import { NavigationContainer } from "@react-navigation/native";
 import ForgotPasswordScreen from "../screens/ForgotPasswordScreen";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
-import { View } from "react-native";
+import { View, ImageBackground } from "react-native";
 import { Text } from "native-base";
+import splash from "../../assets/splash.png";
 const Stack = createStackNavigator();
 
 export default function mainRoutes() {
@@ -28,9 +29,11 @@ export default function mainRoutes() {
   });
   if (isLoading) {
     return (
-      <View>
-        <Text>Loading data...</Text>
-      </View>
+      <ImageBackground
+        source={splash}
+        resizeMode="cover"
+        style={{ flex: 1 }}
+      ></ImageBackground>
     );
   } else {
     return (

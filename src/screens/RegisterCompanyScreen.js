@@ -318,7 +318,7 @@ const RegisterCompany = ({ navigation }) => {
             </FormControl>
             <Button
               mt="2"
-              colorScheme="indigo"
+              bg={colors.primaryColor}
               isLoading={isLoading}
               onPress={handleSubmit}
             >
